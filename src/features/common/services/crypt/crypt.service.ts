@@ -6,7 +6,7 @@ import * as bcrypt from 'bcrypt';
 export class CryptService {
     hash: number;
     constructor() {
-        this.hash = 10//process.env.HASH_KEY || ''
+        this.hash = 10
     }
     async encrypt(value: string): Promise<string> {
         return  await bcrypt.hash(value, this.hash);
