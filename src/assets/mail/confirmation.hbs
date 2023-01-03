@@ -3,7 +3,7 @@
 <head>
     <meta name='viewport' content='width=device-width' />
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-    <title>{title}</title>
+    <title>{{title}}</title>
     <style>
 * { 
     margin: 0; 
@@ -49,6 +49,11 @@ body {
     border: 1px solid #e9e9e9; 
     border-radius: 3px; 
 } 
+.header__email {
+    padding: 20px;
+    background-color: #3f51b5;
+    color: white;
+}
 .content-wrap { 
     padding: 20px; 
 } 
@@ -184,30 +189,32 @@ a {
                                 <table cellpadding='0' cellspacing='0'>
                                     <tr> 
                                         <td>
-                                            <img class='img-responsive' src='https://scontent.fhex5-2.fna.fbcdn.net/v/t39.30808-6/315953357_5610605875674665_2412673102972905007_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHoAhXnp6_41rUQRauprq57hSlCU59c_uSFKUJTn1z-5EMCvEIQV6Hd8SYmnXRWZ9_JLluk1v2roL_motgUivDt&_nc_ohc=rJBPt7k0sFoAX_KVZ0B&tn=AmeIgg_hq8PHLf4C&_nc_ht=scontent.fhex5-2.fna&oh=00_AfAkoPWEJkH8s791Vhc1nTrBDKP-JwPzjU2w_eHBUB2FsA&oe=637C0176' /> 
+                                            <div class="header__email">
+                                                <h1>Saving Wise Team</h1>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class='content-block'>
-                                            <h2>{title}</h2>
+                                            <h2>{{title}}</h2>
                                         </td>
                                     </tr>
                                     <tr> 
                                         <td class='content-block'> 
-                                            <p>Hello {name}</p>
+                                            <p>Hello {{name}}</p>
                                             <p>
                                                 Thanks for joining our family, we're glad to have you here; Currently, you need to active your account by clicking on the link below
                                                 After activating your accouunt, you can login with the following credentials:
                                             </p>
                                             <ul>
-                                                <li>{username}</li>
+                                                <li>{{username}}</li>
                                                 <li>Your password is the one that you entered</li>
                                             </ul>
                                         </td> 
                                     </tr> 
                                     <tr> 
                                         <td class='content-block aligncenter'> 
-                                            <a href='{action}' class='btn-primary'>Click here</a> 
+                                            <a href='{{action}}' class='btn-primary'>Click here</a> 
                                         </td> 
                                     </tr> 
                                 </table>
@@ -227,4 +234,4 @@ a {
         </tr>
     </table>
 </body>
-</html>;
+</html>

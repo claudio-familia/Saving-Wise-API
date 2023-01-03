@@ -1,7 +1,9 @@
 import { MailerService } from '@nestjs-modules/mailer';
 import { Injectable } from '@nestjs/common';
-import { User } from 'src/schemas/User';
-import { ConfirmationContext, ResetPasswordContext } from '../../models/email.context';
+import {
+  ConfirmationContext,
+  ResetPasswordContext,
+} from '../../models/email.context';
 import { EmailTemplate } from '../../models/template-mail.const';
 
 @Injectable()
@@ -16,8 +18,9 @@ export class MailService {
       context: {
         name: context.name,
         username: context.username,
-        title: context.subject
-      }
+        title: context.subject,
+        action: 'https://www.google.com/',
+      },
     });
   }
 
